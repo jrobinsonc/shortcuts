@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Reset Watchman Watch",
+      "type": "shell",
+      "command": "watchman watch-del '${workspaceFolder}' ; watchman watch-project '${workspaceFolder}'",
+      "group": "build",
+      "presentation": {
+        "focus": true,
+      },
+      "detail": "Deletes and recreates the watchman watch for the current workspace"
+  }
+  ]
+}
