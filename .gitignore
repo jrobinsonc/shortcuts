@@ -2,3 +2,7 @@ node_modules
 
 # Turborepo
 .turbo
+
+# vercel
+.vercel
+
