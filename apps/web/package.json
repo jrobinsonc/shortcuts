@@ -8,9 +8,11 @@
     "check-types": "tsc --project ./tsconfig.lint.json"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.6"
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
