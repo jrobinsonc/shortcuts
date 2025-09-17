@@ -1,8 +1,14 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "tasks": {
+    "check-types": { "dependsOn": ["^check-types"] },
+    "lint": { "dependsOn": ["^lint"] },
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["check-types", "lint", "^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "@repo/web#build": {
+      "dependsOn": ["check-types", "lint", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
