@@ -6,6 +6,9 @@
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
     "mikestead.dotenv",
-    "csstools.postcss"
+    "csstools.postcss",
+    "christian-kohler.npm-intellisense",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github"
   ]
 }
