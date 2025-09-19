@@ -1,7 +1,8 @@
 import { ChangeEvent, useState } from 'react';
 import type { InputHTMLAttributes, RefObject, KeyboardEvent } from 'react';
-import { cn } from '@/utils/cn';
+import { cn } from '@repo/ui/utils/cn';
 import { useId } from 'react';
+import { Button } from './Button';
 
 //TODO - Move these rules to a separate file and finish the validation logic.
 type ValidationRuleRegExp = RegExp;
@@ -106,7 +107,7 @@ function validateValue(
  * @param props - The props for the text input.
  * @returns A text input component with a label and a validation.
  */
-export default function TextInput({
+export function TextInput({
   className,
   label,
   description,
@@ -142,7 +143,7 @@ export default function TextInput({
         type="text"
         id={inputId}
         ref={ref}
-        className={cn('border-1 border-primary rounded-md p-2', className)}
+        className={cn('border border-primary rounded-md p-2', className)}
         aria-describedby={descriptionId}
         onKeyDown={(evt: KeyboardEvent<HTMLInputElement>) => {
           if (!isMultiLine && evt.key === 'Enter') {
@@ -150,7 +151,7 @@ export default function TextInput({
           }
         }}
         onChange={(evt: ChangeEvent<HTMLInputElement>) => {
-          const value = evt.target.value;
+          const value: string = evt.target.value;
 
           // If there is already an error, run the validation again.
           if (error !== null) {
@@ -163,12 +164,12 @@ export default function TextInput({
 
       {/* Hide the description if there is an error. */}
       {description && !error && (
-        <p id={descriptionId} className="text-muted text-sm">
+        <span id={descriptionId} className="text-muted text-sm">
           {description}
-        </p>
+        </span>
       )}
 
-      {error && <p className="text-error text-sm">{error}</p>}
+      {error && <span className="text-error text-sm">{error}</span>}
     </div>
   );
 }
