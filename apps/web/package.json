@@ -8,19 +8,16 @@
     "check-types": "tsc --project ./tsconfig.lint.json"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
+    "@repo/ui": "workspace:*",
     "next": "15.5.3",
-    "react": "19.1.1",
-    "react-dom": "19.1.0",
-    "tailwind-merge": "^3.3.1"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@repo/eslint-config": "workspace:*",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.3",
-    "tailwindcss": "^4"
+    "eslint-config-next": "15.5.3"
   }
 }

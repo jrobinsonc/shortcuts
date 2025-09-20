@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import type { ButtonHTMLAttributes } from 'react';
-import { cn } from '@/utils/cn';
+import { cn } from '@repo/ui/utils/cn';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
@@ -12,10 +12,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * @param props - The props of the button.
  * @param props.variant - The variant of the button.
  * @param props.className - The class name of the button.
- * @param props.disabled - If the button is disabled.
  * @returns The button component.
  */
-export default function Button({
+export function Button({
   variant,
   className,
   ...props
