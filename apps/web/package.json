@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint ./src",
     "check-types": "tsc --project ./tsconfig.lint.json"
   },
   "dependencies": {
@@ -14,10 +14,9 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@repo/eslint-config": "workspace:*",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint-config-next": "15.5.3"
+    "eslint": "catalog:"
   }
 }

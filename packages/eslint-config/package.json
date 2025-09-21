@@ -4,16 +4,19 @@
   "type": "module",
   "private": true,
   "exports": {
-    "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
+    "./base": "./configs/base.js",
+    "./next-js": "./configs/next-js.js",
+    "./react-for-next-js": "./configs/react-for-next-js.js",
+    "./react": "./configs/react.js",
+    "./turbo": "./configs/turbo.js"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
-    "@next/eslint-plugin-next": "^15.5.3",
     "eslint": "catalog:",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-config-next": "15.5.3",
+    "eslint-plugin-jest": "^29.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-turbo": "^2.5.6",
